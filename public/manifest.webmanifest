@@ -1,6 +1,6 @@
 {
-    "name": "Images App",
-    "short_name": "Images App",
+    "name": "Budget Tracker",
+    "short_name": "Budget Tracker Application",
     "icons": [
       {
         "src": "assets/images/icons/icon-72x72.png",
@@ -43,9 +43,10 @@
         "type": "image/png"
       }
     ],
+    
+    "start_url": "/",
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "start_url": "/",
     "display": "standalone"
   }
   
