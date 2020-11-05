@@ -1,11 +1,53 @@
+
 body {
   font-size: 120%;
   font-family: Arial;
+  background: url("https://images.unsplash.com/photo-1533628635777-112b2239b1c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+  
+}
+
+.container {
+  display: flex;
 }
 
 button, input {
   font-size: 100%;
   font-family: Arial;
+  border-radius: 10px;
+  padding: 9px;
+  margin-bottom: 5px;
+  box-shadow: 1px black;
+ 
+}
+
+#add-btn {
+  background-color: #009999;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 5px;
+  box-shadow: 1px 1px 1px 1px black;
+
+}
+
+#add-btn:hover {
+  background-color: #009900;
+}
+
+#sub-btn {
+  background-color: #009999;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  padding: 12px;
+  margin-left: 30%;
+  margin-bottom: 5px;
+  box-shadow: 1px 1px 1px 1px black;
+
+}
+#sub-btn:hover {
+  background-color: #ff4d4d;
 }
 
 table {
@@ -32,20 +74,34 @@ tr:nth-child(even) {
   text-align: center;
 }
 
+.chart {
+  margin: 0 auto;
+  max-width: 825px;
+  text-align: center;
+  background-color: whitesmoke;
+}
+
 .total {
   font-size: 150%;
   text-decoration: underline;
 }
 
 .form {
-  margin-top: 25px;
-  width: 100%;
+  margin-top: 10px;
+  width: 120%;
+  height: 9%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
 }
 
 .transactions {
   text-align: left;
   max-height: 300px;
   overflow: auto;
-  width: 90%;
+  width: 120%;
   margin: 0 auto;
+
 }

@@ -8,7 +8,9 @@ let db;
 // Opening the database
 const request = indexedDB.open("budget", 1);
 
+
 request.onupgradeneeded = function (event) {
+    // Saving the IDBDatabase interface 
     const db = event.target.result;
     db.createObjectStore("pending", { autoIncrement: true });
 };
@@ -27,6 +29,8 @@ request.onerror = function (event) {
 
 function saveRecord(record) {
     const transaction = db.transaction(["pending"], "readwrite");
+    
+    //Storing values
     const store = transaction.objectStore("pending");
 
     store.add(record);
