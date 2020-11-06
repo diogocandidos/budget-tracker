@@ -1,4 +1,4 @@
-//For brawser that still use a prefix:
+//For browser that still use a prefix:
 const indexedDB = window.indexedDB || 
 window.mozIndexedDB || 
 window.webkitIndexedDB ||
@@ -12,7 +12,9 @@ const request = indexedDB.open("budget", 1);
 request.onupgradeneeded = function (event) {
     // Saving the IDBDatabase interface 
     const db = event.target.result;
-    db.createObjectStore("pending", { autoIncrement: true });
+    db.createObjectStore("pending", { 
+        keyPath: "id",
+        autoIncrement: true });
 };
 
 request.onsuccess = function (event) {
@@ -29,10 +31,7 @@ request.onerror = function (event) {
 
 function saveRecord(record) {
     const transaction = db.transaction(["pending"], "readwrite");
-    
-    //Storing values
     const store = transaction.objectStore("pending");
-
     store.add(record);
 }
 

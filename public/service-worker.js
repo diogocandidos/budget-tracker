@@ -1,22 +1,24 @@
 const CACHE_NAME = "static-cache-v2";
 const DATA_CACHE_NAME = "data-cache-v1";
 
+const FILES_TO_CACHE = [
+    "/",
+    "/index.html",
+    "/styles.css",
+    "/db.js",
+    "/index.js",
+    "/icons/icon-192x192.png",
+    "/icons/icon-512x512.png",
+    "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",
+    "https://cdn.jsdelivr.net/npm/chart.js@2.8.0"
+
+];
+
+
 const iconSizes = ["72", "96", "128", "144", "152", "192", "384", "512"];
 const iconFiles = iconSizes.map(
-  (size) => `/assets/images/icons/icon-${size}x${size}.png`
+  (size) => `/icons/icon-${size}x${size}.png`
 );
-
-const staticFilesToPreCache = [
-  "/",
-  "/public/db.js",
-  "/public/index.html",
-  "/public/index.js",
-  "/public/manifest.webmanifest",
-  "/public/service-worker.js",
-  "/public/styles.css",
-  "/public/icons/icon-192x192.png",
-  "/public/icons/icon-512x512.png",
-].concat(iconFiles);
 
 // Install
 self.addEventListener("install", function (evt) {
@@ -62,7 +64,7 @@ self.addEventListener("fetch", function (evt) {
 
                         return response;
                     })
-                    .catch(err => {
+                    .catch(() => {
                         // Network request failed, try to get it from the cache.
                         return cache.match(evt.request);
                     });

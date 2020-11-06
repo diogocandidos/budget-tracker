@@ -29,7 +29,10 @@ THEN that will be shown on the page, and added to their transaction history when
 ****** [Heroku link]() ******
 
 * Screenshot
-<img width="700" alt="budgetDemo" src="https://user-images.githubusercontent.com/61811579/98158888-8165fa00-1e90-11eb-8362-96c5b5c039d7.png">
+
+<img width="700" alt="budget" src="https://user-images.githubusercontent.com/61811579/98310162-219b4c00-1f81-11eb-9199-b3a50a0a0376.png">
+
+<img width="700" alt="chart" src="https://user-images.githubusercontent.com/61811579/98310167-252ed300-1f81-11eb-9675-959084ea7620.png">
 
 
 ## Licence
